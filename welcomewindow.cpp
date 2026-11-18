@@ -33,9 +33,23 @@ WelcomeWindow::WelcomeWindow(QWidget *parent)
     question->setAlignment(Qt::AlignCenter);
 
     QPushButton *startBtn = new QPushButton(tr("Начать игру"), central);
+    
+    QLabel *pictureLabel = new QLabel(tr(""), central);
+    pictureLabel->setAlignment(Qt::AlignCenter);
+    pictureLabel->setMinimumHeight(150);
+
+    QPixmap pix(QString(":/icons/start.png"));
+    if (pix.isNull()) {
+        pictureLabel->setText(tr("(картинка не загружена)"));
+        
+    } else {
+    pictureLabel->setPixmap(pix.scaledToHeight(140, Qt::SmoothTransformation));
+
+    }
 
     layout->addStretch();
     layout->addWidget(title);
+    layout->addWidget(pictureLabel);
     layout->addWidget(question);
     layout->addWidget(startBtn, 0, Qt::AlignCenter);
     layout->addStretch();
