@@ -2,5 +2,15 @@
     <qresource prefix="/">
         <file>icons/start.png</file>
         <file>icons/hint.png</file>
+        <file>icons/son.jpg</file>
+        <file>icons/i.jpg</file>
+        <file>icons/ka.jpg</file>
+        <file>icons/an.jpg</file>
+        <file>icons/sofa.jpg</file>
+        <file>icons/am.jpg</file>
+        <file>icons/lu.jpg</file>
+        <file>icons/mi.jpg</file>
+        <file>icons/anton.jpg</file>
+        <file>icons/ma.png</file>
     </qresource>
 </RCC>
