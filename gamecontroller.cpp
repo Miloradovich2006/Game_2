@@ -6,16 +6,16 @@ GameController::GameController(QObject *parent)
     // Пока 10 ЗАГЛУШЕК. Позже Маша/Амалия заменят на реальных людей
     // и вынесут в people.json в .qrc.
     m_people = {
-                 {QStringLiteral("Шабашева Милена"),     QStringLiteral("Любит математику"),       QString()},
-                 {QStringLiteral("Беляева Ангелина"),    QStringLiteral("Играет на гитаре"),        QString()},
-                 {QStringLiteral("Романова Мария"), QStringLiteral("Коллекционирует марки"),   QString()},
-                 {QStringLiteral("Козлова Софья"),  QStringLiteral("Готовит лучшие блины"),    QString()},
-                 {QStringLiteral("Сорокина Мария"), QStringLiteral("Занимается плаванием"),    QString()},
-                 {QStringLiteral("Кучумова Амалия"), QStringLiteral("Рисует акварелью"),       QString()},
-                 {QStringLiteral("Новожилова Карина"), QStringLiteral("Играет в шахматы"),       QString()},
-                 {QStringLiteral("Лобанова Любовь"),  QStringLiteral("Любит путешествия"),       QString()},
-                 {QStringLiteral("Антон Сергеевич"),    QStringLiteral("Программирует на Python"), QString()},
-                 {QStringLiteral("Махова София"),QStringLiteral("Поёт в хоре"),             QString()},
+                 {QStringLiteral("Шабашева Милена"),     QStringLiteral("Твиттерская..."),       QString()},
+                 {QStringLiteral("Беляева Ангелина"),    QStringLiteral("Депутатка"),        QString()},
+                 {QStringLiteral("Романова Мария"), QStringLiteral("Дресс код на свадьбу зеленый. Вход строго с открыткой"),   QString()},
+                 {QStringLiteral("Козлова Софья"),  QStringLiteral("Каждую пару пытется убиться/сломать мебель/все сразу"),    QString()},
+                 {QStringLiteral("Сорокина Мария"), QStringLiteral("Мечта управлять самолетом"),    QString()},
+                 {QStringLiteral("Кучумова Амалия"), QStringLiteral("Сборник цитат"),       QString()},
+                 {QStringLiteral("Новожилова Карина"), QStringLiteral("Сама написала только два курсача...один по алгебре"),       QString()},
+                 {QStringLiteral("Лобанова Любовь"),  QStringLiteral("Главная роблоксерша"),       QString()},
+                 {QStringLiteral("Антон Сергеевич"),    QStringLiteral("Ждем рефлексию всей группой"), QString()},
+                 {QStringLiteral("Махова София"),QStringLiteral("Искала мужа по фамилии"),             QString()},
                  };
 }
 
