@@ -4,6 +4,8 @@
 #include "welcomewindow.h"
 #include "gamewindow.h"
 #include "gamecontroller.h"
+#include "resultwindow.h"
+#include "answerswindow.h"
 
 int main(int argc, char *argv[])
 {
@@ -12,8 +14,10 @@ int main(int argc, char *argv[])
     WelcomeWindow welcome;
     GameWindow game;
     GameController controller;
+    ResultWindow result;
+    AnswersWindow answers;
 
-    // Главное окно → запуск игры
+    // 1) Старт игры
     QObject::connect(&welcome, &WelcomeWindow::startGameRequested,
                      &welcome, &QWidget::hide);
     QObject::connect(&welcome, &WelcomeWindow::startGameRequested,
@@ -21,7 +25,7 @@ int main(int argc, char *argv[])
     QObject::connect(&welcome, &WelcomeWindow::startGameRequested,
                      &controller, &GameController::startGame);
 
-    // Контроллер → игровое окно (обновление интерфейса)
+    // 2) Контроллер → игровое окно
     QObject::connect(&controller, &GameController::roundStarted,
                      &game, &GameWindow::onRoundStarted);
     QObject::connect(&controller, &GameController::scoreChanged,
@@ -31,20 +35,31 @@ int main(int argc, char *argv[])
     QObject::connect(&controller, &GameController::pictureHintShown,
                      &game, &GameWindow::onPictureHintShown);
 
-    // Игровое окно → контроллер (действия игрока)
+    // 3) Игровое окно → контроллер
     QObject::connect(&game, &GameWindow::answerSubmitted,
                      &controller, &GameController::submitAnswer);
     QObject::connect(&game, &GameWindow::pictureHintRequested,
                      &controller, &GameController::requestPictureHint);
 
-    // Пока игра окончилась — просто закроем игровое окно
-    // (в следующем коммите добавим окно результата)
+    // 4) Конец игры → окно результата
     QObject::connect(&controller, &GameController::gameFinished,
                      &game, &QWidget::hide);
+    QObject::connect(&controller, &GameController::gameFinished,
+                     &result, &ResultWindow::setResult);
+    QObject::connect(&controller, &GameController::gameFinished,
+                     &result, &QWidget::show);
 
-    welcome.resize(500, 350);
+    // 5) Окно результата → окно правильных ответов
+    QObject::connect(&result, &ResultWindow::answersRequested,
+                     &answers, &QWidget::show);
+    QObject::connect(&result, &ResultWindow::answersRequested,
+                     &answers, [&]() { answers.setPeople(controller.people()); });
+
+    welcome.resize(500, 500);
     game.resize(500, 500);
-    welcome.show();
+    result.resize(500, 500);
+    answers.resize(500, 500);
 
+    welcome.show();
     return app.exec();
 }

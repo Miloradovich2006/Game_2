@@ -6,16 +6,16 @@ GameController::GameController(QObject *parent)
     // Пока 10 ЗАГЛУШЕК. Позже Маша/Амалия заменят на реальных людей
     // и вынесут в people.json в .qrc.
     m_people = {
-                 {QStringLiteral("Шабашева Милена"),     QStringLiteral("Твиттерская..."),       QString(":/icons/mi.jpg")},
-                 {QStringLiteral("Беляева Ангелина"),    QStringLiteral("Депутатка"),        QString(":/icons/an.jpg")},
-                 {QStringLiteral("Романова Мария"), QStringLiteral("Дресс код на свадьбу зеленый. Вход строго с открыткой"),   QString(":/icons/i.jpg")},
-                 {QStringLiteral("Козлова Софья"),  QStringLiteral("Каждую пару пытется убиться/сломать мебель/все сразу"),    QString(":/icons/son.jpg")},
-                 {QStringLiteral("Сорокина Мария"), QStringLiteral("Мечта управлять самолетом"),    QString(":/icons/ma.png")},
-                 {QStringLiteral("Кучумова Амалия"), QStringLiteral("Сборник цитат"),       QString(":/icons/am.jpg")},
-                 {QStringLiteral("Новожилова Карина"), QStringLiteral("Сама написала только два курсача...один по алгебре"),       QString(":/icons/ka.jpg")},
-                 {QStringLiteral("Лобанова Любовь"),  QStringLiteral("Главная роблоксерша"),       QString(":/icons/lu.jpg")},
+                 {QStringLiteral("Милена Алексеевна"),     QStringLiteral("Твиттерская..."),       QString(":/icons/mi.jpg")},
+                 {QStringLiteral("Ангелина Александровна"),    QStringLiteral("Депутатка"),        QString(":/icons/an.jpg")},
+                 {QStringLiteral("Мария Михайловна"), QStringLiteral("Дресс код на свадьбу зеленый. Вход строго с открыткой"),   QString(":/icons/i.jpg")},
+                 {QStringLiteral("Софья Владиславовна"),  QStringLiteral("Каждую пару пытется убиться/сломать мебель/все сразу"),    QString(":/icons/son.jpg")},
+                 {QStringLiteral("Мария Александровна"), QStringLiteral("Мечта управлять самолетом"),    QString(":/icons/ma.png")},
+                 {QStringLiteral("Амалия Искандеровна"), QStringLiteral("Сборник цитат"),       QString(":/icons/am.jpg")},
+                 {QStringLiteral("Карина Юрьевна"), QStringLiteral("Сама написала только два курсача...один по алгебре"),       QString(":/icons/ka.jpg")},
+                 {QStringLiteral("Любовь Дмитриевна"),  QStringLiteral("Главная роблоксерша"),       QString(":/icons/lu.jpg")},
                  {QStringLiteral("Антон Сергеевич"),    QStringLiteral("Ждем рефлексию всей группой"), QString(":/icons/anton.jpg")},
-                 {QStringLiteral("Махова София"),QStringLiteral("Искала мужа по фамилии"),             QString(":/icons/sofa.jpg")},
+                 {QStringLiteral("София Алексеевна"),QStringLiteral("Искала мужа по фамилии"),             QString(":/icons/sofa.jpg")},
                  };
 }
 
