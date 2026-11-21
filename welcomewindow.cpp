@@ -29,7 +29,7 @@ WelcomeWindow::WelcomeWindow(QWidget *parent)
     title->setAlignment(Qt::AlignCenter);
     title->setStyleSheet("font-size: 24px; font-weight: bold;");
 
-    QLabel *question = new QLabel(tr("Начать игру?"), central);
+    QLabel *question = new QLabel(tr("В ответ запишите имя и отчество."), central);
     question->setAlignment(Qt::AlignCenter);
 
     QPushButton *startBtn = new QPushButton(tr("Начать игру"), central);

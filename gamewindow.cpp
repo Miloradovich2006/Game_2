@@ -65,7 +65,7 @@ void GameWindow::onRoundStarted(int current, int total,
     pictureLabel->clear();
     answerEdit->clear();
     answerEdit->setFocus();
-    pictureBtn->setEnabled(!textHint.isEmpty()); // позже можно доработать
+    pictureBtn->setEnabled(!textHint.isEmpty());
 }
 
 void GameWindow::onScoreChanged(int score)
